@@ -3,21 +3,21 @@
 
         <record id="view_prescription_shipment_wizard_view"
             model="ir.ui.view">
-            <field name="name">Create Prescription Shipment</field>
+            <field name="name">Crear Envío de Prescripción</field>
             <field name="model">create.prescription.shipment</field>
             <field name="arch" type="xml">
-                <form string="Create prescription invoices">
+                <form string="Crear facturas de prescripción">
                     <separator 
-                        string="Do you want to create the prescription Shipment ?" />
+                        string="¿Desea crear el envío de prescripción?" />
                     <newline />
                     <separator string="                  "
                          />
                      <footer>
                     <button name="create_prescription_shipment"
-                        class="oe_highlight" string="Create Prescription Shipment"
+                        class="oe_highlight" string="Crear Envío de Prescripción"
                         type="object" />
-                        or
-                    <button special="cancel" string="Cancel" class="oe_highlight" />
+                        o
+                    <button special="cancel" string="Cancelar" class="oe_highlight" />
                     </footer>
                 </form>
 
@@ -25,7 +25,7 @@
         </record>
 
         <record id="action_create_prescription_shipment1" model="ir.actions.act_window">
-            <field name="name">Create Prescription Shipment</field>
+            <field name="name">Crear Envío de Prescripción</field>
             <field name="res_model">create.prescription.shipment</field>
             <field name="binding_view_types">form</field>
             <field name="view_mode">form</field>

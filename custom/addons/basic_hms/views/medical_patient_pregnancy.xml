@@ -5,7 +5,7 @@
             <field name="name">medical.patients.pregnancy.form.view</field>
             <field name="model">medical.patient.pregnency</field>
             <field name="arch" type="xml">
-                <form string="Pregnancies">
+                <form string="Embarazos">
                     <group id="group_pregnancy_header" colspan="4"
                         col="8">
                         <field name="gravida" />
@@ -13,13 +13,13 @@
                         <field name="pdd" />
                         <field name="current_pregnency" />
                     </group>
-                    <group colspan="3" string="Prenatal Evaluations">
+                    <group colspan="3" string="Evaluaciones Prenatales">
                         <field name="medical_patient_evolution_prental_ids" />
                     </group>
-                    <group colspan="3" string="Prenatal Info">
+                    <group colspan="3" string="Información Prenatal">
                         <field name="medical_perinatal_ids" />
                     </group>
-                    <group colspan="3" string="Puerperium Monitor">
+                    <group colspan="3" string="Monitoreo del Puerperio">
                         <field name="puerperium_perental_ids" />
                     </group>
                     <group id="group_pregnancy_footer1" colspan="4"

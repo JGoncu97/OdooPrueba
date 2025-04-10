@@ -5,18 +5,18 @@
             <field name="name">create.prescription.invoice.wizard.view</field>
             <field name="model">create.prescription.invoice</field>
             <field name="arch" type="xml">
-                <form string="Create prescription invoices">
+                <form string="Crear facturas de prescripción">
                     <separator
-                        string="Do you want to create the prescription invoice(s) ?" />
+                        string="¿Desea crear la(s) factura(s) de prescripción?" />
                     <newline />
                     <separator string="                  "
                         colspan="6" />
                     <footer>
                         <button name="create_prescription_invoice"
-                            class="oe_highlight" string="Create Prescription Invoices"
+                            class="oe_highlight" string="Crear facturas de prescripción"
                             type="object" />
-                        or
-                        <button special="cancel" string="Cancel"
+                        o
+                        <button special="cancel" string="Cancelar"
                             class="oe_highlight" />
                     </footer>
                 </form>
@@ -25,7 +25,7 @@
 
 
         <record id="action_create_prescription_invoice1" model="ir.actions.act_window">
-            <field name="name">Create Prescription Invoice</field>
+            <field name="name">Crear factura de prescripción</field>
             <field name="res_model">create.prescription.invoice</field>
             <field name="binding_view_types">form</field>
             <field name="view_mode">form</field>

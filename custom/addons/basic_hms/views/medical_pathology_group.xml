@@ -4,7 +4,7 @@
             <field name="name">medical.pathology.group.form.view</field>
             <field name="model">medical.pathology.group</field>
             <field name="arch" type="xml">
-                <form string="Pathology Groups">
+                <form string="Grupos de Patología">
                     <group colspan="4" col="4">
                         <field name="name" />
                         <field name="code" />
@@ -20,7 +20,7 @@
             <field name="name">medical.pathology.group.tree.view</field>
             <field name="model">medical.pathology.group</field>
             <field name="arch" type="xml">
-                <list string="Pathology Groups">
+                <list string="Grupos de Patología">
                     <field name="name" />
                     <field name="code" />
                     <field name="desc" />

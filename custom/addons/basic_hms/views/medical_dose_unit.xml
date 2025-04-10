@@ -4,7 +4,7 @@
             <field name="name">medical.dose.unit.form.view</field>
             <field name="model">medical.dose.unit</field>
             <field name="arch" type="xml">
-                <form string="Medicament Units">
+                <form string="Unidades de Medicamento">
                     <group colspan="4" col="4">
                         <field name="name" required="1" />
                         <field name="description" />
@@ -17,7 +17,7 @@
             <field name="name">medical.dose.unit.tree.view</field>
             <field name="model">medical.dose.unit</field>
             <field name="arch" type="xml">
-                <list string="Medicament Units">
+                <list string="Unidades de Medicamento">
                     <field name="name" />
                     <field name="description" />
                 </list>
@@ -25,13 +25,10 @@
         </record>
 
         <record id="action_medical_dose_unit" model="ir.actions.act_window">
-            <field name="name">Medicament Units</field>
+            <field name="name">Unidades de Medicamento</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.dose.unit</field>
             <field name="binding_view_types">form</field>
             <field name="view_mode">list,form</field>
         </record>
-
-
-
 </odoo>

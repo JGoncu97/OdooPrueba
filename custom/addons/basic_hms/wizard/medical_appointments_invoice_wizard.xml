@@ -4,15 +4,15 @@
             <field name="name">medical.appointments.invoice.wizard.view</field>
             <field name="model">medical.appointments.invoice.wizard</field>
             <field name="arch" type="xml">
-                <form string="Create Invoice">
+                <form string="Crear Factura">
                     <h2>
-                        Do you want to create the invoice(s) ?
+                        ¿Desea crear la(s) factura(s)?
                     </h2>
                     <footer>
-                        <button name="create_invoice" string="Create Invoice"
+                        <button name="create_invoice" string="Crear Factura"
                             type="object" class="oe_highlight" />
-                        or
-                        <button string="Cancel" type="object"
+                        o
+                        <button string="Cancelar" type="object"
                             special="cancel" class="oe_highlight" />
                     </footer>
                 </form>
@@ -20,7 +20,7 @@
         </record>
 
         <record id="action_medical_appointments_invoice_wizard" model="ir.actions.act_window">
-            <field name="name">Create Invoice</field>
+            <field name="name">Crear Factura</field>
             <field name="res_model">medical.appointments.invoice.wizard</field>
             <field name="binding_view_types">form</field>
             <field name="view_mode">form</field>

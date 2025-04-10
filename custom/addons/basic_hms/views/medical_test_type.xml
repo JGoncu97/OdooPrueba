@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-        <record id="medical_test_type_tree_view" model="ir.ui.view">
-            <field name="name">medical.test.type.tree.view</field>
-            <field name="model">medical.test_type</field>
-            <field name="arch" type="xml">
-                <list string="Lab test type">
-                    <field name="name" />
-                    <field name="code" />
-                </list>
-            </field>
-        </record>
- 
-        <record id="medical_test_type_form_view" model="ir.ui.view">
-            <field name="name">medical.test.type.form.view</field>
-            <field name="model">medical.test_type</field>
-            <field name="arch" type="xml">
-                <form string="Lab Test">
-                    <sheet>
-                        <notebook>
-                            <page string="Main Info">
+    <record id="medical_test_type_tree_view" model="ir.ui.view">
+        <field name="name">medical.test.type.tree.view</field>
+        <field name="model">medical.test_type</field>
+        <field name="arch" type="xml">
+            <list string="Tipos de Análisis">
+                <field name="name" string="Nombre" />
+                <field name="code" string="Código" />
+            </list>
+        </field>
+    </record>
 
-                                <group>
-                                    <field name="name" required="1" />
-                                    <field name="code" />
-                                </group>
+    <record id="medical_test_type_form_view" model="ir.ui.view">
+        <field name="name">medical.test.type.form.view</field>
+        <field name="model">medical.test_type</field>
+        <field name="arch" type="xml">
+            <form string="Tipo de Análisis">
+                <sheet>
+                    <notebook>
+                        <page string="Información Principal">
 
-                                <field name="critearea_ids" nolabel="1" widget="section_and_note_one2many">
-                                    <list  editable="bottom" string="Test Cases">
-                                        <field name="seq" />
-                                        <field name="name" />
-                                        <field name="normal_range" />
-                                        <field name="lab_test_unit_id" />
-                                    </list>
-                                    <form string="Test Cases">
-                                        <field name="seq" />
-                                        <field name="name" />
-                                        <field name="lab_test_unit_id" />
-                                        <field name="normal_range" />
-                                    </form>
+                            <group>
+                                <field name="name" string="Nombre del Análisis" required="1" />
+                                <field name="code" string="Código" />
+                            </group>
 
-                                </field>
+                            <field name="critearea_ids" nolabel="1" widget="section_and_note_one2many">
+                                <list editable="bottom" string="Parámetros del Análisis">
+                                    <field name="seq" string="Secuencia" />
+                                    <field name="name" string="Parámetro" />
+                                    <field name="normal_range" string="Valores Normales" />
+                                    <field name="lab_test_unit_id" string="Unidad" />
+                                </list>
+                                <form string="Parámetro del Análisis">
+                                    <field name="seq" string="Secuencia" />
+                                    <field name="name" string="Parámetro" />
+                                    <field name="lab_test_unit_id" string="Unidad" />
+                                    <field name="normal_range" string="Valores Normales" />
+                                </form>
+                            </field>
 
-                                <group>
-                                    <field name="service_product_id" />
-                                </group>
-                            </page>
-                            <page string="Extra Info">
-                                <field name="info" />
-                            </page>
-                        </notebook>
-                    </sheet>
-                </form>
+                            <group>
+                                <field name="service_product_id" string="Servicio Asociado" />
+                            </group>
+                        </page>
+                        <page string="Información Adicional">
+                            <field name="info" string="Información Extra" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-            </field>
-        </record>
+    <record id="action_medical_test_type" model="ir.actions.act_window">
+        <field name="name">Tipos de Análisis</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.test_type</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">list,form</field>
+    </record>
 
-        <record id="action_medical_test_type" model="ir.actions.act_window">
-            <field name="name">Lab Test Type</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">medical.test_type</field>
-            <field name="binding_view_types">form</field>
-            <field name="view_mode">list,form</field>
-        </record>
-
-        <menuitem name="Lab Test Type" id="menu_lab_new_type_lab_test"
-            parent="main_menu_conf_laboratory" action="action_medical_test_type" />
+    <menuitem name="Tipos de Análisis" 
+              id="menu_lab_new_type_lab_test"
+              parent="main_menu_conf_laboratory" 
+              action="action_medical_test_type" />
 
 </odoo>

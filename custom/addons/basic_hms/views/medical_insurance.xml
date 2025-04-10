@@ -7,7 +7,7 @@
 			<field name="model">medical.insurance</field>
 			<field name="priority">2</field>
 			<field name="arch" type="xml">
-				<list string="Insurance List">
+				<list string="Lista de Seguros">
 				     <field name="number"/>
                     <field name="medical_insurance_partner_id"/>
                     <field name="type"/>
@@ -23,7 +23,7 @@
 			<field name="name">medical.insurance.form.view</field>
 			<field name="model">medical.insurance</field>
 			<field name="arch" type="xml">
-			<form string="Insurances">
+			<form string="Seguros">
                         <sheet>
                             <group>
                                 <group>
@@ -50,12 +50,12 @@
 
 		<!-- Search View -->
 		<record id="medical_insurance_search_view" model="ir.ui.view">
-			<field name="name">Insurances</field>
+			<field name="name">Seguros</field>
 			<field name="model">medical.insurance</field>
 			<field name="type">search</field>
 			<field name="priority" eval="8" />
 			<field name="arch" type="xml">
-				<search string="Search Insurances">
+				<search string="Buscar Seguros">
 					<separator orientation="vertical" />
 					<field name="number" />
 					<field name="insurance_compnay_id" />
@@ -65,7 +65,7 @@
 		</record>
 
 		<record model="ir.actions.act_window" id="action_medical_insurance">
-			<field name="name">Insurances</field>
+			<field name="name">Seguros</field>
 			<field name="type">ir.actions.act_window</field>
 			<field name="res_model">medical.insurance</field>
 			<field name="binding_view_types">form</field>

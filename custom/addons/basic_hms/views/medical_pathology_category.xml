@@ -4,7 +4,7 @@
             <field name="name">medical.pathology.category.form.view</field>
             <field name="model">medical.pathology.category</field>
             <field name="arch" type="xml">
-                <form string="Disease categories">
+                <form string="Categorías de Enfermedades">
                     <sheet>
                         <group colspan="4" col="4">
                             <field name="name" />
@@ -20,7 +20,7 @@
             <field name="name">medical.pathology.category.tree.view</field>
             <field name="model">medical.pathology.category</field>
             <field name="arch" type="xml">
-                <list string="Disease Categories">
+                <list string="Categorías de Enfermedades">
                     <field name="name" />
                 </list>
             </field>
@@ -28,7 +28,7 @@
 
         <record id="action_medical_pathology_category_tree"
             model="ir.actions.act_window">
-            <field name="name">Disease categories Structure</field>
+            <field name="name">Estructura de Categorías de Enfermedades</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.pathology.category</field>
             <field name="binding_view_types">list</field>
@@ -37,17 +37,17 @@
 
         <record id="action_medical_pathology_category_form"
             model="ir.actions.act_window">
-            <field name="name">Disease Categories</field>
+            <field name="name">Categorías de Enfermedades</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.pathology.category</field>
             <field name="binding_view_types">form</field>
             <field name="view_mode">list,form</field>
         </record>
 
-        <menuitem id="menu_diseases" name="Diseases"
+        <menuitem id="menu_diseases" name="Enfermedades"
             parent="main_menu_configartion" sequence='1' />
 
-        <menuitem id="menu_categories" name="Categories" action="action_medical_pathology_category_form"
+        <menuitem id="menu_categories" name="Categorías" action="action_medical_pathology_category_form"
             parent="menu_diseases" />
 
 </odoo>

@@ -7,15 +7,15 @@
             <field name="model">medical.patient.prental.evoultion</field>
             <field name="arch" type="xml">
                 <list>
-                    <field name="evoultion_date" />
-                    <field name="gestational_weeks" />
-                    <field name="hypertansion" />
-                    <field name="preclampsia" />
-                    <field name="overweight" />
-                    <field name="diabetes" />
-                    <field name="placenta_previa" />
-                    <field name="invasive_placentation" />
-                    <field name="vasa_previa" />
+                    <field name="evoultion_date" string="Fecha de Evolución" />
+                    <field name="gestational_weeks" string="Semanas de Gestación" />
+                    <field name="hypertansion" string="Hipertensión" />
+                    <field name="preclampsia" string="Preeclampsia" />
+                    <field name="overweight" string="Sobrepeso" />
+                    <field name="diabetes" string="Diabetes" />
+                    <field name="placenta_previa" string="Placenta Previa" />
+                    <field name="invasive_placentation" string="Placenta Invasiva" />
+                    <field name="vasa_previa" string="Vasa Previa" />
                 </list>
             </field>
         </record>

@@ -4,18 +4,18 @@
             <field name="name">medical.patient.rounding.form.view</field>
             <field name="model">medical.patient.rounding</field>
             <field name="arch" type="xml">
-                <form string="Roundings">
+                <form string="Rondas">
                     <sheet>
                         <header>
                             <button name="done_button" states="draft"
-                                string="Done" icon="gtk-execute" type="object"
+                                string="Finalizar" icon="gtk-execute" type="object"
                                 modifiers="{'invisible': [['state', 'not in', ['draft']]]}" />
                             <field name="state" readonly="1"
                                 widget="statusbar" statusbar_visible="draft"
                                 modifiers="{'readonly': true}" />
                         </header>
                         <notebook> 
-                            <page string="Main" id="rounding_main">
+                            <page string="Principal" id="rounding_main">
                                 <group colspan="4" id="group_admin_data">
                                     <field name="medical_inpatient_registration" />
                                     <field name="health_physician_id" />
@@ -25,7 +25,7 @@
                                     <field name="icu_patient" />
                                     <field name="warning" />
                                 </group>
-                                <group colspan="6" col="6" string="Six P's">
+                                <group colspan="6" col="6" string="Seis P's">
                                     <field name="pain" />
                                     <field name="potty" />
                                     <field name="position" />
@@ -34,7 +34,7 @@
                                     <field name="personal_needs" />
                                 </group>
                                 <group colspan="6" col="6"
-                                    string="Vital Signs">
+                                    string="Signos Vitales">
                                     <field name="temperature" />
                                     <field name="systolic" />
                                     <field name="diastolic" />
@@ -42,21 +42,21 @@
                                     <field name="respiratory_rate" />
                                     <field name="osat" />
                                 </group>
-                                <group colspan="6" col="6" string="Other">
+                                <group colspan="6" col="6" string="Otros">
                                     <field name="diuresis" />
                                     <field name="urinary_catheter" />
                                     <field name="glycemia" />
                                     <field name="depression" />
                                     <field name="evolution" />
                                 </group>
-                                <group colspan="4" string="Round Summary">
+                                <group colspan="4" string="Resumen de Ronda">
                                     <field name="round_summary"
                                         nolabel="1" colspan="4" />
                                 </group>
                             </page>
-                            <page string="ICU">
+                            <page string="UCI">
                                 <group colspan="4" col="6"
-                                    string="Neurologic">
+                                    string="Neurológico">
                                     <field name="gcs" can_create="true"
                                         can_write="true" modifiers="{}" />
                                     <field name="pupil_dilation"
@@ -74,7 +74,7 @@
                                         modifiers="{}" />
                                 </group>
                                 <group colspan="4" col="4"
-                                    string="Respiratory">
+                                    string="Respiratorio">
                                     <group colspan="4" col="4">
                                         <field name="oxygen_mask"
                                             modifiers="{}" />
@@ -95,7 +95,7 @@
                                             modifiers="{}" />
                                     </group>
                                     <newline />
-                                    <group string="Chest Expansion"
+                                    <group string="Expansión Torácica"
                                         colspan="6" col="6">
                                         <field name="chest_expansion"
                                             modifiers="{}" />
@@ -105,7 +105,7 @@
                                             modifiers="{}" />
                                     </group>
 
-                                    <group string="Xray">
+                                    <group string="Radiografía">
                                         <field name="xray"
                                             class="oe_avatar" options="{'size': [90, 90]}"/>
                                     </group>
@@ -147,7 +147,7 @@
                                             modifiers="{}" />
                                     </group>
                                 </group>
-                                <group string="Blood and Skin"
+                                <group string="Sangre y Piel"
                                     colspan="6" col="6">
                                     <field name="bacteremia"
                                         modifiers="{}" />
@@ -159,7 +159,7 @@
                                     <field name="necrotizing_fasciitis"
                                         modifiers="{}" />
                                 </group>
-                                <group string="Digestive and Abdomen"
+                                <group string="Digestivo y Abdomen"
                                     colspan="8" col="8">
                                     <field name="vomiting"
                                         modifiers="{}" />
@@ -171,12 +171,12 @@
                                         modifiers="{}" />
                                 </group>
                             </page>
-                            <page string="Procedures">
-                                <form string=" Procedures">
+                            <page string="Procedimientos">
+                                <form string=" Procedimientos">
                                     
                                     <field name="procedures_ids"
                                         nolabel="1" >
-                                        <list string="Procedures">
+                                        <list string="Procedimientos">
                                             <field name="procedure" />
                                             <field name="notes" />
                                         </list>
@@ -184,15 +184,15 @@
                                 </form>
                             </page>
 
-                            <page string="Medication">
+                            <page string="Medicamentos">
                                 <group colspan="2" col="2">
                                     <field name="hospital_location_id" />
                                 </group>
-                                <form string=" Medicaments">
+                                <form string=" Medicamentos">
                                    
                                     <field name="medicaments_ids"
                                         nolabel="1" >
-                                        <list string="Medicaments"
+                                        <list string="Medicamentos"
                                             editable="bottom">
                                             <field name="medicament_id" />
                                             <field name="quantity" />
@@ -206,7 +206,7 @@
                                          <field name="medical_supplies_ids"
                                         nolabel="1" 
                                         mode="list">
-                                        <list string="Medical Supplies"
+                                        <list string="Suministros Médicos"
                                             editable="bottom">
                                             <field name="product_id" />
                                             <field name="short_comment" />
@@ -218,7 +218,7 @@
 
                                          <field name="vaccines_ids"
                                         nolabel="1" >
-                                        <list string="Vaccines"
+                                        <list string="Vacunas"
                                             editable="bottom">
                                             <field name="vaccine_id" />
                                             <field name="quantity" />
@@ -231,8 +231,8 @@
                                 </form>
                             </page>
 
-                            <page string="Stock Moves">
-                                <field name="move_ids" string="Stock Moves" />
+                            <page string="Movimientos de Stock">
+                                <field name="move_ids" string="Movimientos de Stock" />
                             </page>
                         </notebook>
                     </sheet>
@@ -245,7 +245,7 @@
             <field name="name">medical.patient.rounding.tree.view</field>
             <field name="model">medical.patient.rounding</field>
             <field name="arch" type="xml">
-                <list string="Roundings">
+                <list string="Rondas">
                     <field name="warning" />
                     <field name="medical_inpatient_registration" />
                     <field name="evaluation_start" />
@@ -256,7 +256,7 @@
         </record>
 
         <record id="action_medical_patient_rounding" model="ir.actions.act_window">
-            <field name="name">Roundings</field>
+            <field name="name">Rondas</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.patient.rounding</field>
             <field name="binding_view_types">form</field>

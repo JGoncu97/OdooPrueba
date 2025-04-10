@@ -5,10 +5,10 @@
             <field name="name">medical.patients.form.view</field>
             <field name="model">medical.patient</field>
             <field name="arch" type="xml">
-                <form string="Patient">
+                <form string="Paciente">
                     <header>
                         <button name="print_report" type="object"
-                            string="Print Patient Card" class="oe_highlight" />
+                            string="Imprimir Tarjeta de Paciente" class="oe_highlight" />
                     </header>
                     <sheet>
                       
@@ -22,7 +22,7 @@
                                 </div>
                                 <h1>
                                     <field name="patient_id"
-                                        default_focus="1" placeholder="Patient Name"
+                                        default_focus="1" placeholder="Nombre del Paciente"
                                         context="{'default_is_patient': 1,'default_is_person': 1}"
                                          />
                                 </h1>
@@ -41,26 +41,26 @@
                                 <field name="partner_address_id" invisible="1"/>
                                 <label for="partner_address_id" name="partner_address_id"/>
                                 <div class="o_address_format">
-                                    <field name="street" placeholder="Street..." class="o_address_street" />
-                                    <field name="street2" placeholder="Street 2..." class="o_address_street" />
-                                    <field name="city" placeholder="City" class="o_address_city" />
-                                    <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" />
-                                    <field name="zip_code" placeholder="ZIP" class="o_address_zip"/>
-                                    <field name="country_id" placeholder="Country" class="o_address_country"/>
+                                    <field name="street" placeholder="Calle..." class="o_address_street" />
+                                    <field name="street2" placeholder="Calle 2..." class="o_address_street" />
+                                    <field name="city" placeholder="Ciudad" class="o_address_city" />
+                                    <field name="state_id" class="o_address_state" placeholder="Estado" options="{&quot;no_open&quot;: True}" />
+                                    <field name="zip_code" placeholder="Código Postal" class="o_address_zip"/>
+                                    <field name="country_id" placeholder="País" class="o_address_country"/>
                                 </div>
                             </group>
                         </group>
 
                         <group> 
                             <separator colspan="4"
-                                string="Patient Critical Information" />
+                                string="Información Crítica del Paciente" />
                             <newline />
                             <field colspan="2" name="critical_info"
                                 nolabel="1" />
                         </group>
                         <notebook>
-                            <page string="General Information">
-                                <group string="Patient General Information">
+                            <page string="Información General">
+                                <group string="Información General del Paciente">
                                     <group>
                                         <field name="blood_type" />
                                         <field name="current_insurance_id" />
@@ -73,7 +73,7 @@
                                 </group>
 
                                 <group colspan="4"
-                                    string="Patient Extra Information">
+                                    string="Información Extra del Paciente">
                                     <field colspan="4" name="general_info"
                                         nolabel="1" />
                                     <newline />
@@ -87,15 +87,15 @@
                                 </group>
                             </page>
 
-                            <page string="Diseases">
+                            <page string="Enfermedades">
                                 <field name="patient_disease_ids"
                                     nolabel="1" widget="section_and_note_one2many"/>
                             </page>
 
 
-                            <page string="Socioeconomics">
+                            <page string="Socioeconómicos">
                                 <notebook>
-                                    <page string="Main">
+                                    <page string="Principal">
                                         <group string="General">
                                             <group>
                                                 <field name="ses" />
@@ -108,7 +108,7 @@
                                                 <field name="hostile_area" />
                                             </group>
                                         </group>
-                                        <group string="Infrastructure">
+                                        <group string="Infraestructura">
                                             <group>
                                                 <field name="sewers" />
                                                 <field name="water" />
@@ -122,13 +122,13 @@
                                                 <field name="internet" />
                                             </group>
                                         </group>
-                                        <group string="Extra Info">
+                                        <group string="Información Extra">
                                             <field name="ses_notes"
                                                 nolabel="1" colspan = "2"/>
                                         </group>
                                     </page>
-                                    <page string="Family">
-                                        <group string="Family APGAR">
+                                    <page string="Familia">
+                                        <group string="APGAR Familiar">
                                             <group>
                                                 <field name="fam_apgar_help" />
                                                 <field
@@ -143,7 +143,7 @@
                                                     name="fam_apgar_affection" />
                                             </group>
                                         </group>
-                                        <group string="Other Family Issues">
+                                        <group string="Otros Problemas Familiares">
                                             <group>
                                                 <field name="single_parent" />
                                                 <field
@@ -167,9 +167,9 @@
                                     </page>
                                 </notebook>
                             </page>
-                            <page string="Gyneco / Obs"
+                            <page string="Gineco / Obs"
                                  invisible="sex == 'm'">
-                                <group string="Gyneco">
+                                <group string="Gineco">
                                     <group string="General">
                                         <field name="fertile" />
                                         <field name="currently_pregnant" />
@@ -177,7 +177,7 @@
                                         <field name="menopausal" />
                                         <field name="menopause" />
                                     </group>
-                                    <group string="Prevention and Screening">
+                                    <group string="Prevención y Detección">
                                         <field name="breast_self_examination" />
                                         <newline />
                                         <field name="mammography" />
@@ -188,7 +188,7 @@
                                         <field name="colposcopy_last" />
                                     </group>
                                 </group>
-                                <group string="Obstetrics">
+                                <group string="Obstetricia">
                                     <group>
                                         <field name="gpa" />
                                         <field name="full_term" />
@@ -210,22 +210,22 @@
                                 </notebook>
                             </page>
 
-                            <page string="Lifestyle">
+                            <page string="Estilo de Vida">
                                 <notebook>
-                                    <page string="Diet and Excersice">
+                                    <page string="Dieta y Ejercicio">
                                         <group>
-                                            <group string="Physical Excersise">
+                                            <group string="Ejercicio Físico">
                                                 <field name="excercise" />
                                                 <field
                                                     name="excercise_minutes_day" />
                                             </group>
-                                            <group string="Sleep">
+                                            <group string="Sueño">
                                                 <field name="sleep_hours" />
                                                 <field
                                                     name="sleep_during_daytime" />
                                             </group>
                                         </group>
-                                        <group string="Diet info">
+                                        <group string="Información de la Dieta">
                                             <group>
                                                 <field name="number_of_meals" />
                                                 <field name="eats_alone" />
@@ -239,14 +239,14 @@
                                                 <field name="diet_info" />
                                             </group>
                                         </group>
-                                        <group string="Lifestyle Information">
+                                        <group string="Información sobre el Estilo de Vida">
                                             <field name="lifestyle_info"
                                                 nolabel="1" colspan="2"/>
                                         </group>
                                     </page>
-                                    <page string="Addictions">
+                                    <page string="Adicciones">
                                         <notebook>
-                                            <page string="Main">
+                                            <page string="Principal">
                                                 <group>
                                                     <group>
                                                         <field
@@ -293,7 +293,7 @@
                                       </notebook>
                                     </page>
 
-                                    <page string="Sexuality">
+                                    <page string="Sexualidad">
                                         <group>
                                             <group>
                                                 <field
@@ -312,25 +312,25 @@
                                         </group>
                                         <group>
                                             <group
-                                                string="Other sexual practices">
+                                                string="Otras prácticas sexuales">
                                                 <field name="sex_oral" />
                                                 <field name="sex_anal" />
                                             </group>
-                                            <group string="Prostitution">
+                                            <group string="Prostitución">
                                                 <field name="prostitute" />
                                                 <field
                                                     name="sex_with_prostitutes" />
                                             </group>
                                         </group>
                                         <group
-                                            string="Extra info about the patient sexuality">
+                                            string="Información extra sobre la sexualidad del paciente">
                                             <field nolabel="1"
                                                 name="sexuality_info" colspan = "2"/>
                                         </group>
                                     </page>
 
-                                    <page string="Safety">
-                                        <group string="Drive and Home Safety">
+                                    <page string="Seguridad">
+                                        <group string="Seguridad en Manejo y Hogar">
                                             <group>
                                                 <field
                                                     name="motorcycle_rider" />
@@ -350,7 +350,7 @@
                             </page>
 
 
-                            <page string="Medication">
+                            <page string="Medicación">
                                 <field name="medication_ids" widget="section_and_note_one2many" >
                                     <list>
                                         <field name="medical_medicament_id" />
@@ -362,7 +362,7 @@
                                     </list>
                                 </field>
                             </page>
-                            <page string="Vaccinations">
+                            <page string="Vacunas">
                               
                                 <field name="medical_vaccination_ids"
                                     nolabel="1"  >
@@ -387,7 +387,7 @@
             <field name="name">medical.patients.tree.view</field>
             <field name="model">medical.patient</field>
             <field name="arch" type="xml">
-                <list string="Patient Information">
+                <list string="Información del Paciente">
                     <field name="name" />
                     <field name="patient_id" />
                     <field name="sex" />
@@ -399,7 +399,7 @@
         </record>
 
         <record id="action_medical_patient" model="ir.actions.act_window">
-            <field name="name">Patients</field>
+            <field name="name">Pacientes</field>
             <field name="res_model">medical.patient</field>
             <field name="binding_view_types">form</field>
             <field name="view_mode">list,form</field>
@@ -409,7 +409,7 @@
             parent="menu_patients" sequence="0" />
 
         <record id="action_view_priscription_id2" model="ir.actions.act_window">
-            <field name="name">Prescription Orders</field>
+            <field name="name">Órdenes de Prescripción</field>
             <field name="res_model">medical.prescription.order</field>
             <field name="view_mode">list</field>
             <field name="domain">[('patient_id', '=', active_id)]</field>
@@ -423,7 +423,7 @@
         </record>
 
         <record id="action_view_lab_id" model="ir.actions.act_window">
-            <field name="name">Lab Reports</field>
+            <field name="name">Informes de Laboratorio</field>
             <field name="res_model">medical.lab</field>
             <field name="view_mode">list,form</field>
             <field name="domain">[('patient_id', '=', active_id)]</field>

@@ -4,7 +4,7 @@
             <field name="name">medical.directions.tree.view</field>
             <field name="model">medical.directions</field>
             <field name="arch" type="xml">
-                <list  string="Evaluations">
+                <list  string="Evaluaciones">
                     <field name="medical_directions_pathology_id" />
                     <field name="comments" />
                 </list>

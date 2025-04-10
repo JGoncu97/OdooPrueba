@@ -4,14 +4,14 @@
             <field name="name">medical.patient.evaluation.form.view</field>
             <field name="model">medical.patient.evaluation</field>
             <field name="arch" type="xml">
-                <form string="Patient">
+                <form string="Paciente">
                     <sheet> 
                         <notebook>
-                            <page string="Main Info">
+                            <page string="Información Principal">
                                 <group>
                                     <group>
                                         <field name="medical_patient_id"
-                                            string="Patient" />
+                                            string="Paciente" />
                                         <field name="start_evaluation"
                                             required="1" />
                                         <field name="chief_complaint"
@@ -23,13 +23,13 @@
                                         <field name="physician_partner_id" />
                                     </group>
                                 </group>
-                                <group string="Evaluation Summary">
+                                <group string="Resumen de Evaluación">
                                     <field name="evaluation_summary"
                                         nolabel="1" />
                                 </group>
                             </page>
-                            <page string="Signs">
-                                <group string="Vital Signs">
+                            <page string="Signos">
+                                <group string="Signos Vitales">
                                     <group>
                                         <field name="temperature" />
                                         <field name="diastolic" />
@@ -41,7 +41,7 @@
                                         <field name="osat" />
                                     </group>
                                 </group>
-                                <group string="Nutrition">
+                                <group string="Nutrición">
                                     <group>
                                         <field name="malnutrition" />
                                     </group>
@@ -49,7 +49,7 @@
                                         <field name="dehydration" />
                                     </group>
                                 </group>
-                                <group string="Anthropometry">
+                                <group string="Antropometría">
                                     <group>
                                         <field name="weight" />
                                         <field name="abdominal_circ" />
@@ -109,7 +109,7 @@
                                     </group>
                                 </group>
                                 <newline />
-                                <group string="Glucose">
+                                <group string="Glucosa">
                                     <group>
                                         <field name="glycemia" />
                                     </group>
@@ -118,7 +118,7 @@
                                     </group>
                                 </group>
 
-                                <group string="Lipids">
+                                <group string="Lípidos">
                                     <group>
                                         <field name="cholesterol_total" />
                                         <field name="ldl" />
@@ -130,8 +130,8 @@
                                 </group>
                             </page>
 
-                            <page string="Symptoms">
-                                <group string="Pain">
+                            <page string="Síntomas">
+                                <group string="Dolor">
                                     <group>
                                         <field name="symptom_pain" />
                                     </group>
@@ -226,8 +226,8 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Mental Status">
-                                <group string="Glasgow Coma Scale">
+                            <page string="Estado Mental">
+                                <group string="Escala de Coma de Glasgow">
                                     <group>
                                         <field name="loc" />
                                         <field name="loc_verbal" />
@@ -238,7 +238,7 @@
                                     </group>
                                 </group>
                                 <group
-                                    string="Mental Assessment and Impairments">
+                                    string="Evaluación Mental y Deterioros">
                                     <group>
                                         <field name="mood" />
                                         <field name="orientation" />
@@ -257,26 +257,26 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Diagnosis">
+                            <page string="Diagnóstico">
                                 <group>
                                     <field name="diagnosis_id" />
                                 </group>
-                                <group string="Information on Diagnosis">
+                                <group string="Información sobre el Diagnóstico">
                                     <field name="info_diagnosis"
                                         nolabel="1" />
                                 </group>
-                                <group string="Treatment Plan">
+                                <group string="Plan de Tratamiento">
                                     <field name="directions"
                                         nolabel="1" />
                                 </group>
-                                <group string="Procedures">
+                                <group string="Procedimientos">
                                     <field name="procedure_ids"
                                         nolabel="1" widget="many2many_tags" />
                                 </group>
                                 <group>
                                     <group>
                                         <field name="user_id"
-                                            string="Doctor user ID" />
+                                            string="ID de Usuario del Doctor" />
                                         <field name="medical_appointment_date_id" />
                                         <field name="derived_to_physician_id" />
                                     </group>
@@ -297,8 +297,8 @@
             <field name="name">medical.patient.evaluation.tree.view</field>
             <field name="model">medical.patient.evaluation</field>
             <field name="arch" type="xml">
-                <list string="Evaluations">
-                    <field name="medical_patient_id" string="Patient" />
+                <list string="Evaluaciones">
+                    <field name="medical_patient_id" string="Paciente" />
                     <field name="end_evaluation" />
                     <field name="start_evaluation" />
                     <field name="physician_partner_id" />

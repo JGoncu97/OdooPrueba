@@ -19,7 +19,7 @@ class medical_patient_medication(models.Model):
     discontinued = fields.Boolean(string='Discontinuado')
     route = fields.Many2one('medical.drug.route', string="Vía de administración")
     dose = fields.Float(string='Dosis')
-    qty = fields.Integer(string='X')
+    qty = fields.Integer(string='Cantidad')
     dose_unit = fields.Many2one('medical.dose.unit', string='Unidad de dosis')
     duration = fields.Integer(string="Duración del tratamiento")
     duration_period = fields.Selection([('minutes','Minutos'),

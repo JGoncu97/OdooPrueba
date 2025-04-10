@@ -5,7 +5,7 @@
         <field name="name">medical.neomatal.apgar.tree.view</field>
         <field name="model">medical.neomatal.apgar</field>
         <field name="arch" type="xml">
-            <list string="Medical Neomatal Apgar">
+            <list string="Evaluación Apgar Neonatal">
                 <field name="apgar_minute" />
                 <field name="apgar_respiration" />
                 <field name="apgar_activity" />
